@@ -89,6 +89,18 @@ const PaymentForm = ({
 
         <div className='form-group'>
           <Input
+            type='text'
+            name='patientid'
+            onBlur={handleBlur}
+            placeholder='patient_id'
+            
+          />
+        </div>
+
+
+
+        <div className='form-group'>
+          <Input
             name='patient'
             placeholder='Patient'
             onBlur={handleBlur}

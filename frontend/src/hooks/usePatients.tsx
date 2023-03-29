@@ -1,8 +1,6 @@
 import { IPatient } from '../interfaces/patient';
 import { useDispatch, useSelector } from 'react-redux';
-
 import * as actions from '../redux/patients/actions';
-
 import { IAppState } from '../interfaces/app-state';
 
 export function usePatients() {

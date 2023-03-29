@@ -11,6 +11,7 @@ import { updateSettings, resetSettings } from '../../redux/settings/actions';
 import { fetchPatients } from '../../redux/patients/actions';
 import { fetchAppointments } from '../../redux/appointments/actions';
 import { fetchPayments } from '../../redux/payments/actions';
+import { fetchInventories } from '../../redux/inventories/actions';
 
 import className from '../../utils/class-names';
 
@@ -22,7 +23,8 @@ import './BaseLayout.scss';
 
 const patientsUrl = 'http://localhost:7000/patients';
 const appointmentsUrl = 'http://localhost:7000/appointments';
-const paymentsUrl = 'http://localhost:7000/payments'
+const paymentsUrl = 'http://localhost:7000/payments';
+const inventoriesUrl = 'http://localhost:7000/inventories'
 
 type Props = {
   nav: ReactNode;
@@ -53,6 +55,10 @@ const BaseLayout = ({ nav, topNav, sideNav, orientation, children }: Props) => {
   useEffect(() => {
     dispatch(fetchPayments());
   }, [paymentsUrl]);
+
+  useEffect(() => {
+    dispatch(fetchInventories());
+  }, [inventoriesUrl]);
 
   const handleScroll = (event) => {
     setScrolled(event.target.scrollTop > 0);

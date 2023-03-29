@@ -52,6 +52,18 @@ const PaysTable = ({
           </span>
         )
       },
+
+      {
+        key: 'patientNo',
+        dataIndex: 'patientNo',
+        title: 'patientNo',
+        render: (patientNo) => (
+          <span className='nowrap' style={{ color: '#a5a5a5' }}>
+            {patientNo}
+          </span>
+        )
+      },
+
       {
         key: 'patient',
         dataIndex: 'patient',
@@ -138,10 +150,10 @@ const PaysTable = ({
         footer={null}
         onCancel={closeModal}
         destroyOnClose
-        title={<h3 className='title'>Add patient</h3>}
+        title={<h3 className='title'>Add payment</h3>}
       >
         <PayForm
-          submitText='Update patient'
+          submitText='Update payment'
           onCancel={closeModal}
           onSubmit={onEditPayment}
           payment={payment}

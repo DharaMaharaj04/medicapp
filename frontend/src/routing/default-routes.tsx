@@ -49,6 +49,9 @@ import IcofontIconsPage from '../pages/icons/IcofontIconsPage';
 import PaysPage from '../pages/dashboards/payment/Pays';
 import PatientDetails from '../pages/dashboards/patients/PatientDetails';
 import SeatReservation from '../pages/dashboards/dashboard/SeatReservation';
+import LabManagement from '../pages/dashboards/LabManagement/Lab';
+import InventoryManagement from '../pages/dashboards/LabManagement/Inventories';
+import InventoryForm from '../pages/dashboards/LabManagement/InventoryForm';
 
 export const defaultRoutes: IRoute[] = [
   {
@@ -58,6 +61,14 @@ export const defaultRoutes: IRoute[] = [
   {
     path: 'seatallotment',
     component: SeatReservation
+  },
+  {
+    path: 'lab',
+    component: LabManagement
+  },
+  {
+    path: 'inventory',
+    component: InventoryManagement
   },
   {
     path: 'settings',

@@ -109,6 +109,19 @@ export interface IEventCalendar {
   user: string;
 }
 
+
+export interface IInventory {
+  // id?: string;
+  _id?: string;
+  item?: string;
+  category?: string;
+  brands?: string;
+  vendor?: string;
+  quantity?: string;
+  currentstock?: string;
+  shelf?: string
+}
+
 export const mapEventCalendar = (eventCalendar: IEventCalendar) => ({
   ...eventCalendar,
   id: eventCalendar?._id,

@@ -27,6 +27,9 @@ app.use('/appointments', appointmentRouter);
 const paymentRouter = require('./routes/payments');
 app.use('/payments', paymentRouter);
 
+const inventoryRouter = require('./routes/inventories');
+app.use('/inventories', inventoryRouter);
+
 app.use(express.static('public'));
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

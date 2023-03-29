@@ -19,3 +19,9 @@ export const fetchPayment = () => axios.get(pay_url);
 export const deletePayment = (id) => axios.delete(`${pay_url}/${id}`);
 export const createPayment = (newPayment) => axios.post(pay_url, newPayment);
 export const editPayment = (id, editPayment) => axios.patch(`${pay_url}/${id}`, editPayment);
+
+const invent_url = 'http://localhost:7000/inventories';
+export const fetchInventory = () => axios.get(invent_url);
+export const deleteInventory = (id) => axios.delete(`${invent_url}/${id}`);
+export const createInventory = (newInventory) => axios.post(invent_url, newInventory);
+export const editInventory = (id, editInventory) => axios.patch(`${invent_url}/${id}`, editInventory);
